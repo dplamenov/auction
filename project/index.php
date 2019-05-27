@@ -1,7 +1,9 @@
 <?php
 require 'config.php';
 if(isset($_POST['login'])){
-    //todo check user
+    $email = mysqli_real_escape_string($dbc, $_POST['email']);
+    $password = mysqli_real_escape_string($dbc, $_POST['password']);
+    $users = mysqli_query($dbc, "SELECT * FROM `users` WHERE email = '$email' and password = '$password'");
     $_SESSION['islogged'] = true;
     header('Location: index.php');
 }
