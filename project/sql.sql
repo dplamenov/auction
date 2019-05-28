@@ -16,6 +16,6 @@ CREATE TABLE IF NOT EXISTS `products`
   `end`           VARCHAR(40)  NOT NULL,
   `description`   TEXT         NOT NULL,
   `price`         INT          NOT NULL,
-  `image_url`     VARCHAR(200) NOT NULL,
+  `image_url`     VARCHAR(700) NOT NULL,
   PRIMARY KEY (`product_id`)
 ) ENGINE = InnoDB;

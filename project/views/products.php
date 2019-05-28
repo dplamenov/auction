@@ -11,7 +11,7 @@
     <tr><th>Image</th></tr>
 <?php
 while ($product = mysqli_fetch_assoc($products)){
-    echo '<tr><td>'.$product["image_url"].'</td></tr>';
+    echo '<tr><td><img src="'.$product["image_url"].'" /></td></tr>';
 }
 ?>
 </table>
