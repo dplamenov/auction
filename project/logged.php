@@ -7,5 +7,5 @@ if($_SESSION['islogged'] !== true){
 }
 $products = mysqli_query($dbc, "SELECT * FROM products");
 while ($product = mysqli_fetch_assoc($products)){
-    echo '<pre>' . print_r($product, true) . '</pre>';
+
 }
