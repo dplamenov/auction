@@ -11,7 +11,15 @@ function login() {
         },
         dataType: "html"
     }).done(function (done) {
-        console.log(done);
+        if(typeof done === 'string'){
+            let errors = $('#errors');
+            errors.html('');
+            let object = JSON.parse(done);
+            for(let key in object){
+                let element = object[key];
+                errors.append(`<p>${element}</p>`);
+            }
+        }
     });
 
 }

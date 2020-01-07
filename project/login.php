@@ -9,6 +9,8 @@ if (count($errors) === 0) {
     $stmt = $pdo->prepare('SELECT * FROM `users` WHERE email = ? and password = ?');
     $stmt->execute(array($_POST['email'], $_POST['password']));
     var_dump($stmt->fetch());
+} else {
+    echo json_encode($errors);
 }
 $email = mysqli_real_escape_string($dbc, $_POST['email']);
 $password = mysqli_real_escape_string($dbc, $_POST['password']);

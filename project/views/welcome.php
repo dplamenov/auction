@@ -4,6 +4,9 @@ $js = ['welcome.js', 'user.js'];
 include 'header.php';
 ?>
 <h1>Welcome to Auction System</h1>
+<div id="errors">
+
+</div>
 <div id="login">
     <button type="button" class="btn btn-primary" onclick="toRegister()">Register</button>
     <h3>Login</h3>
@@ -28,7 +31,6 @@ include 'header.php';
 <div id="register" style="display: none">
     <button type="button" class="btn btn-primary" onclick="toLogin()">Login</button>
     <h3>Register</h3>
-    <form action="index.php" method="post">
         <div class="input-group mb-3" style="width: 600px">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">&#x1f4e7;</span>
@@ -52,8 +54,7 @@ include 'header.php';
                    aria-describedby="basic-addon1">
         </div>
         <input type="hidden" name="type" value="register">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <button class="btn btn-primary">Submit</button>
 </div>
 </body>
 </html>
