@@ -7,24 +7,23 @@ include 'header.php';
 <div id="login">
     <button type="button" class="btn btn-primary" onclick="toRegister()">Register</button>
     <h3>Login</h3>
-    <form action="index.php" method="post">
-        <div class="input-group mb-3" style="width: 600px">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">&#x1f4e7;</span>
-            </div>
-            <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Username"
-                   aria-describedby="basic-addon1">
+
+    <div class="input-group mb-3" style="width: 600px">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">&#x1f4e7;</span>
         </div>
-        <div class="input-group mb-3" style="width: 600px">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">&#x1f512;</span>
-            </div>
-            <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Username"
-                   aria-describedby="basic-addon1">
+        <input type="text" id="login_email" class="form-control" placeholder="Email" aria-label="Username"
+               aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3" style="width: 600px">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">&#x1f512;</span>
         </div>
-        <input type="hidden" name="type" value="login">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <input type="password" id="login_password" class="form-control" placeholder="Password" aria-label="Username"
+               aria-describedby="basic-addon1">
+    </div>
+    <input type="hidden" name="type" value="login">
+    <button type="submit" class="btn btn-primary" onclick="login()">Submit</button>
 </div>
 <div id="register" style="display: none">
     <button type="button" class="btn btn-primary" onclick="toLogin()">Login</button>
