@@ -12,5 +12,5 @@ if (isset($_POST['login'])) {
 if (@$_SESSION['islogged'] === true) {
     include 'logged.php';
 } else {
-    include 'login_form.php';
+    include 'views/welcome.php';
 }
