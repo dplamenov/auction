@@ -1,6 +1,7 @@
 <?php
 session_start();
-$dbc = mysqli_connect('localhost', 'root', '', 'auction');
+$iniFile = parse_ini_file('../config.ini');
+$dbc = mysqli_connect($iniFile['host'], $iniFile['user'], $iniFile['password'], $iniFile['name']);
 
 function view($view, $data)
 {
