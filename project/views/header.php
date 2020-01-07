@@ -7,8 +7,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title><?php echo $title ?? 'Title' ?></title>
     <?php
+
     if (isset($js)) {
-        echo '<script src="js/welcome.js"></script>';
+        foreach ($js as $value){
+            echo '<script src="js/'.$value.'"></script>';
+        }
     }
     ?>
     <style>

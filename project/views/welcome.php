@@ -1,6 +1,6 @@
 <?php
 $title = 'Welcome';
-$js = 'welcome.js';
+$js = ['welcome.js', 'user.js'];
 include 'header.php';
 ?>
 <h1>Welcome to Auction System</h1>
