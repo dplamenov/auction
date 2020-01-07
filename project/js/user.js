@@ -11,15 +11,17 @@ function login() {
         },
         dataType: "html"
     }).done(function (done) {
-        if(typeof done === 'string'){
+        console.log(done);
+        if (done !== 'done') {
             let errors = $('#errors');
             errors.html('');
             let object = JSON.parse(done);
-            for(let key in object){
+            for (let key in object) {
                 let element = object[key];
                 errors.append(`<p>${element}</p>`);
             }
+        } else {
+            window.location.href = 'index.php';
         }
     });
-
 }
